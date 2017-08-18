@@ -21,10 +21,11 @@ class Answer extends Model
     */
 
 
-    protected $table = 'game'
+    protected $table = 'game';
     protected $fillable = [
         'answer', 'poin',
     ];
+
 
     public function getGames(){
         return $this->hasMany('App\Model\Game','answer_game','answer_id','game_id');

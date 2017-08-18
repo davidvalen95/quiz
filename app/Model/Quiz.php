@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,7 +19,7 @@ class Quiz extends Model
 
     */
 
-    protected $table = 'game'
+    protected $table = 'game';
     protected $fillable = [
         'genre','question'
     ];

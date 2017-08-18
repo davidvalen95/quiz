@@ -16,4 +16,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/coba-coba', 'coba@getCobaCoba');
+Route::get('/coba-coba', function(){
+
+    $games = App\Model\Room::find(1)->getGames;
+    $wut = "";
+    foreach($games as $game){
+        // die();
+        $wut .= $game->tipe. " ";
+    }
+    return 'helow ! '. $wut;
+});
